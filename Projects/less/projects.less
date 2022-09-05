@@ -1,0 +1,510 @@
+//out: ../css/style.css
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, a, span, p, div {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	list-style: none;
+	text-decoration: none;
+	color: #000;
+}
+
+@primaryColor: #10c9c3;
+@secondaryColor: #191919;
+@thirdColor: #787878;
+@background: #f5f5f5; 
+
+h1{
+    color: @secondaryColor;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    padding-bottom: 20px;
+}
+
+h2{
+    font-size: 30px;
+    color: @secondaryColor;
+    font-weight: 600;
+    line-height: 60px;
+    padding-bottom: 20px;
+}
+
+h3{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+    color: @secondaryColor;
+    text-transform: uppercase;
+}
+
+p{
+    color: @thirdColor;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/************************
+********Header***********
+*************************/
+.header-bg{
+    background-color: #fff;
+    width: 100%;
+
+    .wrapper{
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .logo{
+            width: 40%;
+            padding-left: 100px;
+        }
+        .menu{
+            width: 60%;
+            
+            .menu-element{
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 100px;
+
+                >li{
+                    padding-right: 30px;
+
+                    >a{
+                        color: @secondaryColor;
+                        font-size: 12px;
+                        line-height: 24px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+
+                        &:hover{
+                        color: @primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/************************
+********Projects***********
+*************************/
+.slider-container{
+    position: relative;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+    
+    .slides-row{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 6000px;
+        overflow: hidden;
+        transition: 0.5s;
+        display: flex;
+
+        .two-block{
+            height: 100%;
+            display: flex;
+
+            .background{
+                background-color: rgb(240, 235, 235);
+                width: 50%;
+                height: 570px;
+                display: flex;
+                align-items: center;
+
+                .about{
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 70px;
+                    width: 70%;
+
+                    .info{
+                        >p{
+                            padding-bottom: 30px;
+                        }
+                        .client-data{
+                            padding: 0;
+                            b{
+                                color: #000;
+                            }
+                            a{
+                                color: @thirdColor;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }   
+            }
+            .img-about{
+                width: 50%;
+                height: 570px;
+                background-image: url(../img/672936606740625e09c556c462bbb3eb.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img-about2{
+                background-image: url(../img/prav-pit-2.jpg);
+                width: 50%;
+                height: 570px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img-about3{
+                background-image: url(../img/1626853288_8-kartinkin-com-p-zdorovii-uzhin-yeda-krasivo-foto-8.jpg);
+                width: 50%;
+                height: 570px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    } 
+}  
+/*********************************
+********Control projects***********
+**********************************/
+.container-control{
+    width: 100%;
+
+    .control{
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+
+        .previous{
+            margin-left: 100px;
+            user-select: none;
+            cursor: pointer;
+            img{
+                width: 10px;
+                height: 10px;
+            }
+            span{
+                padding-left: 5px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #000;
+                text-transform: uppercase;
+            }
+        }
+        .image{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            user-select: none;
+        } 
+        .next{
+            margin-right: 100px;
+            user-select: none;
+            cursor: pointer;
+            img{
+                width: 10px;
+                height: 10px;
+            }
+            span{
+                padding-right: 5px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #000;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+/************************
+********Footer***********
+*************************/
+.bg-footer{
+    background-color: #141414;
+    width: 100%;
+
+    .wrapper{
+        display: flex;
+        width: 100%;
+        padding: 60px 0;
+
+        .company{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+
+            h3{
+                font-size: 18px;
+                color: #fff;
+                line-height: 72px;
+                font-weight: 500;
+                text-transform: none;
+            }
+            p{
+               color: #bcbcbc;
+               font-size: 15px;
+               line-height: 24px; 
+            }
+            
+        }
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+
+            span{
+                color: #bcbcbc; 
+                font-size: 15px;
+                line-height: 24px; 
+                
+                pre{
+                    margin: 0;
+                }
+            } 
+        }
+        .navigation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            
+            .menu{
+                padding-right: 40px;
+            }
+        }
+        .social-networks{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            
+        }
+        a{
+            color: #bcbcbc;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+}
+/****************************
+***********Media***********
+**************************/
+@media (max-width: 2560px){
+    .icon-menu{
+        display: none;
+    } 
+}
+@media (max-width: 1200px){
+    .icon-menu{
+        display: none;
+    } 
+    .header-bg .wrapper .menu .menu-element{
+        padding-right: 50px;
+    }
+    .container-control .control{
+        .previous{
+            margin-left: 50px;
+        }
+        .next{
+            margin-right: 50px;
+        }
+    } 
+}
+@media (max-width: 992px){
+    .icon-menu{
+        display: none;
+    } 
+    .header-bg .wrapper .menu .menu-element{
+        padding-right: 20px;
+    }
+    .slider-container .slides-row .two-block .background .about{
+        padding-left: 30px;
+        width: 90%;
+    }
+    .bg-footer .wrapper .company{
+        padding-left: 20px;
+    }
+}
+@media (max-width: 768px){
+    .icon-menu{
+        display: none;
+    }
+    .header-bg .wrapper .logo{
+        padding-left: 50px;
+    }
+    .header-bg .wrapper .menu .menu-element{
+        padding-right: 0;
+    }
+    .container-control .control{
+        .previous{
+            margin-left: 25px;
+        }
+        .next{
+            margin-right: 25px;
+        }
+    }
+    .slider-container {
+        height: 700px;
+
+        .slides-row {
+            .two-block{
+                flex-wrap: wrap-reverse;
+
+                .background{
+                    width: 100%;
+                    height: 350px;
+
+                    .about{
+                        .info{
+                            h2{
+                                padding-bottom: 0;
+                            }p{
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .img-about{
+                    width: 100%;
+                    height: 350px;
+                }
+                .img-about2{
+                    width: 100%;
+                    height: 350px;
+                }
+                .img-about3{
+                    width: 100%;
+                    height: 350px;
+                }
+            }
+        }      
+    } 
+    .bg-footer .wrapper{
+        flex-wrap: wrap;
+        padding: 30px 0;
+        .company{
+            width: 50%;
+            padding: 0 0 20px 20px;
+            justify-content: unset;
+            box-sizing: border-box;
+        }
+        .contact{
+            width: 50%;
+            justify-content: unset;
+            padding: 0 0 20px 20px;
+            box-sizing: border-box;
+        }
+        .navigation{
+            width: 50%;
+            justify-content: unset;
+            padding-left: 20px;
+            box-sizing: border-box;
+            .menu{
+                padding-right: 10px;
+            }
+        }
+        .social-networks{
+            width: 50%;
+            justify-content: unset;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+    } 
+}
+@media (max-width: 576px){
+    .header-bg .wrapper {
+        justify-content: space-between;
+        padding: 15px 0;
+        .logo{
+            padding-left: 20px;
+        }
+        .icon-menu{
+            padding-right: 20px;
+            position: relative;
+            display: inline-block;
+            > img{
+                width: 30px;
+                height: 30px;
+            }
+        }  
+        .menu{
+            position: absolute;
+            top: 6%;
+            right: 5%;
+            width: 30%;
+            background-color: #fff;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            &.active{
+                opacity: 1;
+                visibility: visible;
+                display: inline-block;
+            }
+            .menu-element{
+                justify-content: unset;
+                flex-direction: column;
+                li{
+                    padding: 0 0 0 10px;
+                }
+            }  
+        }
+    }
+    .slider-container {
+        height: 800px;
+        .slides-row {
+            .two-block {
+                .background{
+                    height: 400px;
+                    .about{
+                        height: 100%;
+                    }
+                }
+                .img-about{
+                    height: 400px;
+                }
+                .img-about2{
+                    height: 400px;
+                }
+                .img-about3{
+                    height: 400px;
+                }
+            }
+        }
+    }
+    .bg-footer .wrapper {
+        .company{
+            width: 100%;
+        }
+        .contact{
+            width: 100%;
+        }
+        .navigation{
+            .menu{
+                padding-right: 60px;
+            }
+        }
+        .social-networks{
+            justify-content: center;
+            padding: 0;
+        }
+    }
+}
